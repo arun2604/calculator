@@ -8,17 +8,17 @@ function Calc() {
   const calcButtonDetails = ['7', '8', '9', '/', '4', '5', '6', '*', '1', '2', '3', '+', '0', '.', '=', '-','%','Del',]
 
   const handleButtonClick = (param) => {
-    let arithmatics = ['+', '-', '*', '/', '%']
+    let arithmatics = ['+', '-', '*', '/', '%'];
     if (param == '=') {
-      let total = eval(displayText)
-      setDisplayText(total)
+      let total = eval(displayText);
+      setDisplayText(total);
       return;
     }
     if (param == 'Del') {
       let newString
       if (displayText[displayText.length - 1] == ' ') newString = displayText.slice(0, -3);
       else newString = displayText.slice(0, -1);
-      setDisplayText(newString)
+      setDisplayText(newString);
       return;
     }
     if (arithmatics.includes(param)) setDisplayText(displayText + ' ' + param + ' ');
@@ -26,7 +26,7 @@ function Calc() {
   }
 
   const handleClear = ()=>{
-    setDisplayText('')
+    setDisplayText('');
   }
 
   return (
