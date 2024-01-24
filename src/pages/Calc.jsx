@@ -9,14 +9,14 @@ function Calc() {
 
   const handleButtonClick = (param) => {
     let arithmatics = ['+', '-', '*', '/', '%'];
-    if (param == '=') {
+    if (param === '=') {
       let total = eval(displayText);
-      setDisplayText(total);
+      setDisplayText(String(total));
       return;
     }
-    if (param == 'Del') {
+    if (param === 'Del') {
       let newString
-      if (displayText[displayText.length - 1] == ' ') newString = displayText.slice(0, -3);
+      if (displayText[displayText.length - 1] === ' ') newString = displayText.slice(0, -3);
       else newString = displayText.slice(0, -1);
       setDisplayText(newString);
       return;
