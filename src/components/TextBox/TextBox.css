@@ -1,18 +1,23 @@
-.input-container{
-    display: flex;
-    justify-content: center;
-    padding: 4%;
-    height: 13%;
-    margin-top: 5%;
+/** @format */
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  padding: 4%;
+  height: 13%;
+  margin-top: 5%;
 }
-.innput-box{
-    display: flex;
-    width: 90%;
-    border: none;
-    outline: none;
-    text-align: right;
-    font-size: 250%;
-    padding: 6%;
-    font-weight: 500;
-    pointer-events: none;
+.innput-box {
+  display: flex;
+  width: 90%;
+  border: none;
+  outline: none;
+  text-align: right;
+  font-size: 2em;
+  padding: 10px;
+  font-weight: 500;
+  pointer-events: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
