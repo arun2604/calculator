@@ -33,11 +33,11 @@ jobs:
           source: "build/"
           target: ${{ secrets.REMOTE_DIR }}
 
-      - name: Restart Nginx
+      - name: Restart Apache2
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            sudo systemctl restart nginx
+            sudo systemctl restart apache2
